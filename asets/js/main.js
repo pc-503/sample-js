@@ -31,38 +31,38 @@ $(window).on("load resize", function () {
       $("#fix-menubar_hdr").addClass("dn").removeClass("db");
       $("#fix-menubar").addClass("db").removeClass("dn");
     }
-  });
+  }, 100);
 });
 
 
 // hamburger menu
-$(function() {
-	$('#menubar_hdr').click(function() {
-		$(this).toggleClass('ham');
+$('#menubar_hdr').click(function() {
+  $(this).toggleClass('ham');
 
-		if($(this).hasClass('ham')) {
-			console.log("open")
-			$('#menubar').addClass('db').removeClass('dn');
-			$('body').addClass('modal-active');
-		} else {
-			console.log("close")
-			$('#menubar').addClass('dn').removeClass('db');
-			$('body').removeClass('modal-active');
-		}
-	});
+  if($(this).hasClass('ham')) {
+    console.log("open")
+    $('#menubar').addClass('db').removeClass('dn');
+    $('body').addClass('modal-active');
+  } else {
+    console.log("close")
+    $('#menubar').addClass('dn').removeClass('db');
+    $('body').removeClass('modal-active');
+  }
+});
+$('#fix-menubar_hdr').click(function() {
+  $(this).toggleClass('ham');
+
+  if($(this).hasClass('ham')) {
+    $('#fix-menubar').addClass('db').removeClass('dn');
+    $('body').addClass('modal-active');
+  } else {
+    $('#fix-menubar').addClass('dn').removeClass('db');
+    $('body').removeClass('modal-active');
+  }
 });
 $(function() {
-	$('#fix-menubar_hdr').click(function() {
-		$(this).toggleClass('ham');
-
-		if($(this).hasClass('ham')) {
-			$('#fix-menubar').addClass('db').removeClass('dn');
-			$('body').addClass('modal-active');
-		} else {
-			$('#fix-menubar').addClass('dn').removeClass('db');
-			$('body').removeClass('modal-active');
-		}
-	});
+});
+$(function() {
 });
 
 
