@@ -35,6 +35,7 @@ $(window).on("load resize", function () {
   }, 100);
 });
 
+// close on link click
 $("#menubar a").click(function (e) {
   if ($("body").hasClass("s")) {
     if ($(this).attr("href") === "") {
